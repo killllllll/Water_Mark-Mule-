@@ -30,6 +30,21 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+					<cluodHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>${mule.version}</muleVersion>
+						<!-- Deploy User Parameter -->
+						<username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>
+						
+						<environment>${env}</environment>
+						<applicationName>${appname}</applicationName>
+						<businessGroup>${business}</businessGroup>	
+						<workerType>${VCore}</workerType>
+						<workers>${workers}</workers>
+						<objectStoresV2>true</objectStoresV2>
+					</cluodHubDeployment>
+					
 					<sharedLibraries>
 						<sharedLibrary>
 							<groupId>mysql</groupId>
