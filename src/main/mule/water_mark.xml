@@ -9,10 +9,10 @@ http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/cu
 		<http:listener-connection host="0.0.0.0" port="8083" />
 	</http:listener-config>
 	<db:config name="Database_Config" doc:name="Database Config" doc:id="e948d723-b663-49d0-a1b3-a25ad8881e88" >
-		<db:my-sql-connection host="localhost" port="3306" user="root" password="Password@2022" database="watermark" />
+		<db:my-sql-connection host="localhost" port="3306" user="root" password="Harley1037651@" database="watermark" />
 	</db:config>
 	<flow name="water_markFlow" doc:id="fc26ff35-3c48-4373-92ff-2f4cee1c7145" >
-		<db:listener doc:name="On Table Row" doc:id="31c03354-6cff-4016-bd32-09bae5dce59d" config-ref="Database_Config" table="test_watermark" watermarkColumn="Id" idColumn="Id">
+		<db:listener doc:name="On Table Row" doc:id="31c03354-6cff-4016-bd32-09bae5dce59d" config-ref="Database_Config" table="watermark" watermarkColumn="cust_name" idColumn="cust_id">
 			<scheduling-strategy >
 				<fixed-frequency frequency="10"/>
 			</scheduling-strategy>
